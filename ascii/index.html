@@ -332,22 +332,76 @@
 
 
 <h1 id="ascii">ASCII转换工具</h1>
+<p><label for="input">输入字符串：</label>
+<input id="input" type="text" value="Hello World!" onchange="ascii()"></p>
+<p><label for="separator">分隔符：</label>
+<input id="separator" type="text" value="," onchange="ascii()"></p>
+<p><label for="base">进制：</label>
+<input id="base" type="number" value="10" onchange="ascii()"></p>
+<form id="what" onchange="ascii()">
+  <input type="radio" name="what" value="1" id="what1">
+  <label for="what1">ASCII转字符串</label>
+  <input type="radio" name="what" value="2" id="what2">
+  <label for="what2">字符串转ASCII</label>
+</form>
+
+<p><button class="btn btn-primary" onclick="asciiToString()">ASCII转字符串</button>
+<button class="btn" onclick="stringToAscii()">字符串转ASCII</button></p>
+<div>
+    <label for="output">输出结果：</label>
+    <br>
+    <textarea id="output" rows="4" readonly></textarea>
+</div>
+
 <script>
-  /*用于把ASCII编码转为字符串 */
-  function asciiToString(asciiStr,separator) {
-      return asciiStr.split(separator).map(function(str) {  
-          return String.fromCharCode(parseInt(str));  
-      }).join('');}
+    function asciiToString() {
+        let input = document.getElementById('input').value;
+        let separator = document.getElementById('separator').value;
+        let base = parseInt(document.getElementById('base').value);
 
-  /*用于把字符串转为ASCII编码 */
-  function stringToAscii(strTEXT,separator) {  
-      return strTEXT.split('').map(function(char) {  
-          return char.charCodeAt(0);  
-      }).join(separator);  
-  }
+        let codes = input.split(separator);
+        let result = "";
 
-  /*用于转换进制*/
+        codes.forEach(function(code) {
+            if (base === 10) {
+                result += String.fromCharCode(parseInt(code));
+            } else {
+                result += String.fromCharCode(parseInt(code, base));
+            }
+        });
 
+        document.getElementById('output').value = result;
+    }
+
+    function stringToAscii() {
+        let input = document.getElementById('input').value;
+        let separator = document.getElementById('separator').value;
+        let base = parseInt(document.getElementById('base').value);
+
+        let result = "";
+
+        for (let i = 0; i < input.length; i++) {
+            if (base === 10) {
+                result += input.charCodeAt(i);
+            } else {
+                result += input.charCodeAt(i).toString(base);
+            }
+
+            if (i < input.length - 1) {
+                result += separator;
+            }
+        }
+
+        document.getElementById('output').value = result;
+    }
+
+    function ascii() {
+      if (document.getElementById('input').value=="1"){
+        asciiToString()
+      }else if (document.getElementById('input').value=="2"){
+        stringToAscii()
+      }
+    }
 </script>
 
   <hr>
@@ -355,7 +409,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-06T07:30:54+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-06</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-10-29T02:46:37+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-29</span>
       
         <br>
         创建日期:
@@ -527,6 +581,8 @@
         <script src="../js/timeago.min.js"></script>
       
         <script src="../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../function.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
