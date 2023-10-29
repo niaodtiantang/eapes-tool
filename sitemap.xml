@@ -2,12 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://niaodtiantang.github.io/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <lastmod>2023-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://niaodtiantang.github.io/ascii/</loc>
+         <lastmod>2023-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://niaodtiantang.github.io/calculator/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <lastmod>2023-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
