@@ -45,7 +45,13 @@ plugins:
         type: timeago
         locale: zh
     - glightbox
-
+    - blog
+    - rss:
+        enabled: !ENV [ CI, false ]
+        match_path: blog/posts/.*
+        date_from_meta:
+          as_creation: date
+        comments_path: "#__comments"
 extra:
   consent:
     title: Cookie consent
