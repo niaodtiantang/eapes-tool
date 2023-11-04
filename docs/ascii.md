@@ -1,8 +1,9 @@
 ---
 comments: true
 ---
+# ASCII转换工具
 <!-- 控制宽度的自动适应 -->  
-<style type="text/css">  
+<style>  
 .textarea-auto {
         width: 100%;
         overflow: auto;
@@ -10,20 +11,25 @@ comments: true
     } 
 </style>  
 
-# ASCII转换工具
-<form id="what_from" onchange="ascii()">
+
+*轻松将字符串与ASCII(美国信息交换标准代码)相互转换*
+***
+
+## 数据输入
+
+<form id="from" onchange="ascii()">
 <!--用于获取用户输入的信息-->
 <!--用于获取要转换的字符串-->
 <label for="input">输入字符串：</label>
-<input id="input" type="text" value="Hello World!" onchange="ascii()">
+<textarea id="input" class="textarea-auto" rows="5" type="text" onchange="ascii()" name="input">Hello World!</textarea>
 <br>
 <!--用于获取分隔符-->
 <label for="separator">分隔符：</label>
-<input id="separator" type="text" value="," onchange="ascii()">
+<input id="separator" type="text" value="," onchange="ascii()" name="separator">
 <br>
 <!--用于获取需要采用的进制-->
 <label for="base">进制：</label>
-<input id="base" type="number" value="10" onchange="ascii()">
+<input id="base" type="number" value="10" onchange="ascii()" name="base">
 <br>
 <!--用于获取模式-->
 <input type="radio" name="what" value="1" id="what1"  onchange="ascii()">
@@ -32,11 +38,13 @@ comments: true
 <label for="what2">字符串转ASCII</label>
 </form>
 
+## 结果输出
+
 <div>
     <!--输出结果-->
     <label for="output">输出结果：</label>
     <br>
-    <textarea id="output" readonly rows="4" class="textarea-auto"></textarea>
+    <textarea id="output" readonly class="textarea-auto" rows="10"></textarea>
 </div>
 
 <script>
@@ -85,9 +93,9 @@ comments: true
       /* 
       当表单发生改变，自动启动，更改内容
       */
-      if (what_from.what['value']==="1"){
+      if (from.what['value']==="1"){
         asciiToString();
-      }else if (what_from.what['value']==="2"){
+      }else if (from.what['value']==="2"){
         stringToAscii();
       }
     }

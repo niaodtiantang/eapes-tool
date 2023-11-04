@@ -1,6 +1,10 @@
 site_name: eapes-tool
 nav:
 - 首页: README.md
+- 计算工具:
+    - 计算器: calculator.md
+- 开发工具:
+    - ASCII转换工具: ascii.md
 theme: 
    name: material
    custom_dir: docs/overrides
