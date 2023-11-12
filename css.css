@@ -1,0 +1,6 @@
+.textarea-auto {
+    width: 100%;
+    overflow: auto;
+    word-break: break-all; //解决兼容问题
+    height: 100%; //高度自适应
+}
