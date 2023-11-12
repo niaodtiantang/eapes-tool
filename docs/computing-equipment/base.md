@@ -13,7 +13,7 @@ comments: true
 <label for="to-base">转换后的进制：</label>
 <textarea class="textarea-auto" name="to-base" id="to-base" rows="1">2</textarea>
 
-<label for="text">要转换的字符串：</label>
+<label for="text">要转换的数值（支持数字、英文字母组合，英文应统一大写或小写）：</label>
 <textarea class="textarea-auto" type="text" name="text" id="text" rows="1">10</textarea>
 
 </form>
@@ -36,8 +36,6 @@ function convertBase() {
   let num = document.getElementById('text').value;
   let fromBase = document.getElementById('from-base').value;
   let toBase = document.getElementById('to-base').value;
-  /*说明参数*/
-  document.getElementById('what-output').value = fromBase + "进制的“" + num + "”的" + toBase + "进制为：";
   /* 确保进制在合理范围内 */
   if (fromBase < 2 || fromBase > 36 || toBase < 2 || toBase > 36) {
     document.getElementById('output').value = "无效的进制";
