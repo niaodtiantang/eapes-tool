@@ -96,6 +96,6 @@ comments: true
       autoResize("base");
       autoResize("output");
     }
-    //页面打开时，自动执行一次脚本
+    /*页面打开时，自动执行一次脚本*/
     ascii();
 </script>

@@ -3,6 +3,7 @@ nav:
 - 首页: README.md
 - 计算工具:
     - 计算器: computing-equipment/calculator.md
+    - 进制转换工具: computing-equipment/base.md
 - 开发工具:
     - ASCII转换工具: development-tool/ascii.md
 - 博客: blog/index.md
