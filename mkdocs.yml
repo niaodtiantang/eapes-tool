@@ -18,11 +18,13 @@ theme:
    features:
         - navigation.footer
         - navigation.instant
+        - navigation.instant.progress
         - navigation.tracking
         - navigation.tabs
         - navigation.tabs.sticky
         - navigation.expand
         - toc.follow
+        - toc.integrate
         - navigation.top
         - content.code.annotate
         - announce.dismiss
@@ -31,6 +33,8 @@ theme:
         - search.suggest
         - search.highlight
         - search.share
+        - navigation.sections
+        - navigation.prune
 site_description: 简洁、高效的工具箱
 site_url: https://niaodtiantang.github.io/
 site_author: Niaodtiantang
