@@ -2,39 +2,31 @@
 comments: true
 ---
 # ASCII转换工具
-<!-- 控制宽度的自动适应 -->  
-<style>  
-.textarea-auto {
-        width: 100%;
-        overflow: auto;
-        word-break: break-all; //解决兼容问题
-    } 
-</style>  
-
+<!-- 控制宽度的自动适应 -->   
 
 *轻松将字符串与ASCII(美国信息交换标准代码)相互转换*
 ***
 
 ## 数据输入
 
-<form id="from" onchange="ascii()">
+<form id="from" oninput="ascii()">
 <!--用于获取用户输入的信息-->
 <!--用于获取要转换的字符串-->
 <label for="input">输入字符串：</label>
-<textarea id="input" class="textarea-auto" rows="5" type="text" onchange="ascii()" name="input">Hello World!</textarea>
+<textarea id="input" class="textarea-auto" type="text" oninput="ascii()" name="input">Hello World!</textarea>
 <br>
 <!--用于获取分隔符-->
 <label for="separator">分隔符：</label>
-<input id="separator" type="text" value="," onchange="ascii()" name="separator">
+<textarea id="separator" type="text" oninput="ascii()" name="separator" rows="1">,</textarea>
 <br>
 <!--用于获取需要采用的进制-->
 <label for="base">进制：</label>
-<input id="base" type="number" value="10" onchange="ascii()" name="base">
+<textarea id="base" type="number" oninput="ascii()" name="base" rows="1">10</textarea>
 <br>
 <!--用于获取模式-->
-<input type="radio" name="what" value="1" id="what1"  onchange="ascii()">
+<input type="radio" name="what" value="1" id="what1"  oninput="ascii()">
 <label for="what1">ASCII转字符串</label>
-<input type="radio" name="what" value="2" id="what2"  onchange="ascii()" checked>
+<input type="radio" name="what" value="2" id="what2"  oninput="ascii()" checked>
 <label for="what2">字符串转ASCII</label>
 </form>
 
@@ -44,7 +36,7 @@ comments: true
     <!--输出结果-->
     <label for="output">输出结果：</label>
     <br>
-    <textarea id="output" readonly class="textarea-auto" rows="10"></textarea>
+    <textarea id="output" readonly class="textarea-auto"></textarea>
 </div>
 
 <script>
@@ -98,6 +90,11 @@ comments: true
       }else if (from.what['value']==="2"){
         stringToAscii();
       }
+      /*textarea 自适应高度*/
+      autoResize("input");
+      autoResize("separator");
+      autoResize("base");
+      autoResize("output");
     }
     //页面打开时，自动执行一次脚本
     ascii();
