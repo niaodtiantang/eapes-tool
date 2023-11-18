@@ -36,7 +36,7 @@ theme:
         - navigation.sections
         - navigation.prune
 site_description: 简洁、高效的工具箱
-site_url: https://niaodtiantang.github.io/
+site_url: https://eapes.eu.org
 site_author: Niaodtiantang
 copyright: ©2021-2024 Niaodtiantang
 plugins:
