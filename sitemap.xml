@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eapes.eu.org/computing-equipment/bmi/</loc>
+         <lastmod>2023-11-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eapes.eu.org/computing-equipment/calculator/</loc>
          <lastmod>2023-11-18</lastmod>
          <changefreq>daily</changefreq>
