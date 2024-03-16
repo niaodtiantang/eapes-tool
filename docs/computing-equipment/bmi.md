@@ -36,5 +36,5 @@ BMI由19世纪中期的比利时通才朗伯·阿道夫·雅克·凯特勒最先
     autoResize("output");
   }
   // 加载页面后自动首次运行脚本
-  eval_f()
+  bmi()
 </script>
