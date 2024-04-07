@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eapes.eu.org/3rd-party/docx/</loc>
+         <lastmod>2024-04-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eapes.eu.org/blog/</loc>
          <lastmod>2024-04-07</lastmod>
          <changefreq>daily</changefreq>
