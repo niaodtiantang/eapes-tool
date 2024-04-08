@@ -1,28 +1,24 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>在线生成docx文件</title>
-    <!-- 引入docx.js库 -->
-    <script src="../3rd-party/docx/index.umd.js"></script>
-    <style>
-        /* 进度条的样式 */
-        #progressBar {
-            width: 100%;
-            background-color: #ddd;
-        }
+在线生成docx文件
 
-        #progressBar div {
-            height: 20px;
+<!-- 引入docx.js库 -->
+<script src="../3rd-party/docx/index.umd.js"></script>
+<style>
+    /* 进度条的样式 */
+    #progressBar {
+        width: 100%;
+        background-color: #ddd;
+    }
+
+    #progressBar div {
+        height: 20px;
             background-color: #4CAF50;
             text-align: center;
             line-height: 20px;
             color: white;
         }
     </style>
-</head>
-<body>
+
+
     <h1>在线生成docx文件</h1>
     <form id="docxForm">
         <label for="repeatCount">重复次数:</label>
@@ -80,5 +76,3 @@
             URL.revokeObjectURL(url);
         };
     </script>
-</body>
-</html>
