@@ -1,4 +1,5 @@
 site_name: eapes-tool
+use_directory_urls: false
 nav:
 - 首页: README.md
 - 计算工具:
