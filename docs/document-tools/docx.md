@@ -1,4 +1,4 @@
-在线生成docx文件
+# 在线生成docx文件
 
 <!-- 引入docx.js库 -->
 <script src="../3rd-party/docx/index.umd.js"></script>
@@ -16,24 +16,24 @@
             line-height: 20px;
             color: white;
         }
-    </style>
+</style>
 
 
-    <h1>在线生成docx文件</h1>
-    <form id="docxForm">
-        <label for="repeatCount">重复次数:</label>
-        <input type="number" id="repeatCount" name="repeatCount" required>
-        <br>
-        <label for="textContent">重复内容:</label>
-        <input type="text" id="textContent" name="textContent" required>
-        <br>
-        <button type="submit">生成并下载</button>
-    </form>
-    <div id="progressBar">
-        <div id="progress" style="width: 0%;">0%</div>
+<h1>在线生成docx文件</h1>
+<form id="docxForm">
+    <label for="repeatCount">重复次数:</label>
+    <input type="number" id="repeatCount" name="repeatCount" required>
+    <br>
+    <label for="textContent">重复内容:</label>
+    <input type="text" id="textContent" name="textContent" required>
+    <br>
+    <button type="submit">生成并下载</button>
+</form>
+<div id="progressBar">
+    <div id="progress" style="width: 0%;">0%</div>
     </div>
-    <script>
-        // 处理表单提交事件
+<script>
+// 处理表单提交事件
         document.getElementById('docxForm').onsubmit = async (event) => {
             event.preventDefault();
             const repeatCount = document.getElementById('repeatCount').value;
@@ -75,4 +75,4 @@
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
         };
-    </script>
+</script>
