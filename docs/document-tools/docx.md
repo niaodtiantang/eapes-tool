@@ -1,7 +1,7 @@
 # 在线生成docx文件
 
 <!-- 引入docx.js库 -->
-<script src="https://unpkg.com/docx@8.5.0/build/index.umd.js"></script>
+<script src="https://unpkg.com/docx@5.0.2/build/index.js"></script>
 <style>
     /* 进度条的样式 */
     #progressBar {
